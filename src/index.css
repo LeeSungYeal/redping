@@ -137,3 +137,64 @@ button {
 .animate-fade-up {
   animation: fadeInUp 0.8s var(--transition-smooth) forwards;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  /* Typography Adjustments */
+  .title-lg {
+    font-size: 2.25rem;
+  }
+
+  .title-md {
+    font-size: 1.75rem;
+  }
+
+  .text-lead {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  /* Layout Utilities for Mobile */
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Header Mobile */
+  .header-nav {
+    display: none !important;
+  }
+
+  .header-mobile-btn {
+    display: block !important;
+  }
+
+  /* Specific Section Tweaks */
+  .hero-content {
+    text-align: center;
+    order: 2;
+  }
+
+  .hero-image-wrapper {
+    height: 300px !important;
+    order: 1;
+    margin-bottom: 30px;
+  }
+
+  .process-image {
+    height: 300px !important;
+    order: -1;
+  }
+}

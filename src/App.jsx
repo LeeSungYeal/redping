@@ -38,15 +38,17 @@ const Header = () => {
           </span>
         </div>
         <nav style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>
-          {[
-            { name: '서비스 소개', link: '#services' },
-            { name: '강점', link: '#process' },
-            { name: '문의하기', link: '#contact' }
-          ].map((item) => (
-            <a key={item.name} href={item.link} style={{ fontSize: '15px', fontWeight: '500', color: 'var(--color-text-main)' }}>
-              {item.name}
-            </a>
-          ))}
+          <div className="header-nav" style={{ display: 'flex', gap: '30px' }}>
+            {[
+              { name: '서비스 소개', link: '#services' },
+              { name: '강점', link: '#process' },
+              { name: '문의하기', link: '#contact' }
+            ].map((item) => (
+              <a key={item.name} href={item.link} style={{ fontSize: '15px', fontWeight: '500', color: 'var(--color-text-main)' }}>
+                {item.name}
+              </a>
+            ))}
+          </div>
           <a href="#contact" className="btn btn-primary" style={{ padding: '10px 24px', fontSize: '14px', textDecoration: 'none' }}>
             무료 상담신청
           </a>
@@ -66,8 +68,8 @@ const Hero = () => {
       display: 'flex',
       alignItems: 'center'
     }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
-        <div className="animate-fade-up">
+      <div className="container grid-2" style={{ display: 'grid', gap: '60px', alignItems: 'center' }}>
+        <div className="animate-fade-up hero-content">
           <span style={{
             display: 'inline-block',
             padding: '8px 16px',
@@ -92,7 +94,7 @@ const Hero = () => {
           </p>
 
         </div>
-        <div style={{
+        <div className="hero-image-wrapper" style={{
           position: 'relative',
           height: '500px',
           backgroundColor: '#eee',
@@ -138,7 +140,7 @@ const Services = () => {
           <h2 className="title-md">Our Services</h2>
           <p className="text-lead" style={{ margin: '0 auto' }}>클라이언트의 성공을 위한 최적의 마케팅 솔루션</p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
+        <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
           {services.map((s, i) => (
             <div key={i} style={{
               padding: '40px',
@@ -171,7 +173,7 @@ const Process = () => {
   return (
     <section id="process" className="section" style={{ backgroundColor: 'var(--color-bg-light)' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
+        <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
           <div>
             <h2 className="title-md">Why RedPing?</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', marginTop: '40px' }}>
@@ -196,7 +198,7 @@ const Process = () => {
               ))}
             </div>
           </div>
-          <div style={{ height: '600px', backgroundColor: '#ddd', borderRadius: '24px', overflow: 'hidden' }}>
+          <div className="process-image" style={{ height: '600px', backgroundColor: '#ddd', borderRadius: '24px', overflow: 'hidden' }}>
             {/* Placeholder Image */}
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
