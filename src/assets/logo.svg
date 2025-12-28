@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Book Shape -->
+  <path d="M20 30C20 25.5817 23.5817 22 28 22H50V78H28C23.5817 78 20 74.4183 20 70V30Z" fill="#E60023"/>
+  <path d="M50 22H72C76.4183 22 80 25.5817 80 30V70C80 74.4183 76.4183 78 72 78H50V22Z" fill="#FF4D6A"/>
+  
+  <!-- "Ping" Location Dot/Notification -->
+  <circle cx="50" cy="50" r="12" fill="white" stroke="#E60023" stroke-width="4"/>
+  
+  <!-- Ping Waves (Subtle) -->
+  <path d="M50 10C27.9086 10 10 27.9086 10 50" stroke="#E60023" stroke-width="4" stroke-linecap="round" stroke-opacity="0.2"/>
+  <path d="M90 50C90 27.9086 72.0914 10 50 10" stroke="#E60023" stroke-width="4" stroke-linecap="round" stroke-opacity="0.2"/>
+</svg>

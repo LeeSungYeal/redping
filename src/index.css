@@ -1,0 +1,139 @@
+:root {
+  /* Colors */
+  --color-primary: #e60023;
+  /* Influential Red (Xiaohongshu vibe) */
+  --color-primary-dark: #c2001e;
+  --color-secondary: #1a1a1a;
+  --color-text-main: #111111;
+  --color-text-muted: #666666;
+  --color-bg-light: #f8f9fa;
+  --color-white: #ffffff;
+  --color-border: #eeeeee;
+  --color-gold: #D4AF37;
+
+  /* Typography */
+  --font-main: 'Noto Sans KR', sans-serif;
+  --font-display: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-container: 1200px;
+  --header-height: 80px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-white);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--spacing-container);
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.title-lg {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+}
+
+.title-md {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+.text-lead {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all var(--transition-fast);
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(230, 0, 35, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s var(--transition-smooth) forwards;
+}
